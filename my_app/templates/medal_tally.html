@@ -1,0 +1,26 @@
+<!-- medal_tally.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medal Tally</title>
+</head>
+<body>
+    <h1>Medal Tally</h1>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Gold</th>
+            <th>Silver</th>
+            <th>Bronze</th>
+        </tr>
+        {% for entry in medal_tally %}
+        <tr>
+            <td>{{ entry.country }}</td>
+            <td>{{ entry.gold_count }}</td>
+            <td>{{ entry.silver_count }}</td>
+            <td>{{ entry.bronze_count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

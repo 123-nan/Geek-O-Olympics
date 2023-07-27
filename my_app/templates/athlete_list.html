@@ -1,0 +1,15 @@
+<!-- athlete_list.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Athlete List</title>
+</head>
+<body>
+    <h1>Athlete List</h1>
+    <ul>
+        {% for athlete in athletes %}
+            <li><a href="{% url 'athlete_details' athlete.id %}">{{ athlete.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
